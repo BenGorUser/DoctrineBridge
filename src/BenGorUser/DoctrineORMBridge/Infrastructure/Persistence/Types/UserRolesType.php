@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace BenGorUser\User\Infrastructure\Persistence\Doctrine\ORM\Types;
+namespace BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types;
 
 use BenGorUser\User\Domain\Model\UserRole;
 use Doctrine\DBAL\Platforms\AbstractPlatform;

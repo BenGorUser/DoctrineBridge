@@ -10,29 +10,25 @@
  * file that was distributed with this source code.
  */
 
-namespace BenGorUser\User\Infrastructure\Persistence\Doctrine\ORM\Types;
+namespace BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types;
 
-use BenGorUser\User\Domain\Model\UserId;
+use BenGorUser\User\Domain\Model\UserGuestId;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\GuidType;
 
 /**
- * Doctrine ORM user id custom type class.
+ * Doctrine ORM user guest id custom type class.
  *
  * @author Beñat Espiña <benatespina@gmail.com>
  */
-class UserIdType extends GuidType
+class UserGuestIdType extends GuidType
 {
     /**
      * {@inheritdoc}
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {
-        if ($value instanceof UserId) {
-            return $value->id();
-        }
-
-        return $value;
+        return $value->id();
     }
 
     /**
@@ -40,7 +36,7 @@ class UserIdType extends GuidType
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
-        return new UserId($value);
+        return new UserGuestId($value);
     }
 
     /**
@@ -48,6 +44,6 @@ class UserIdType extends GuidType
      */
     public function getName()
     {
-        return 'user_id';
+        return 'user_guest_id';
     }
 }

@@ -10,11 +10,11 @@
  * file that was distributed with this source code.
  */
 
-namespace BenGorUser\User\Infrastructure\Persistence\Doctrine\ORM;
+namespace BenGorUser\DoctrineORMBridge\Infrastructure\Persistence;
 
-use BenGorUser\User\Infrastructure\Persistence\Doctrine\ORM\Types\UserGuestIdType;
-use BenGorUser\User\Infrastructure\Persistence\Doctrine\ORM\Types\UserIdType;
-use BenGorUser\User\Infrastructure\Persistence\Doctrine\ORM\Types\UserRolesType;
+use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types\UserGuestIdType;
+use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types\UserIdType;
+use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types\UserRolesType;
 use Doctrine\DBAL\Types\Type;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\Tools\Setup;

@@ -10,7 +10,7 @@
  * file that was distributed with this source code.
  */
 
-namespace BenGorUser\User\Infrastructure\Persistence\Doctrine\ORM;
+namespace BenGorUser\DoctrineORMBridge\Infrastructure\Persistence;
 
 use BenGorUser\User\Domain\Model\UserEmail;
 use BenGorUser\User\Domain\Model\UserGuest;
