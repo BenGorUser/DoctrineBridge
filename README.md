@@ -1,5 +1,5 @@
 # DoctrineORMBridge
-> Adapter to make User compatible with Tactician command bus
+> Adapter to make User compatible with Doctrine ORM
 
 [![Build Status](https://travis-ci.org/BenGorUser/DoctrineORMBridge.svg?branch=master)](https://travis-ci.org/BenGorUser/DoctrineORMBridge)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/BenGorUser/DoctrineORMBridge/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/BenGorUser/DoctrineORMBridge/?branch=master)
