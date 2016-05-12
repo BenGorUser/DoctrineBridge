@@ -1,5 +1,5 @@
 {
-    "name": "bengoruser/doctrine-orm-bridge",
+    "name": "bengor-user/doctrine-orm-bridge",
     "description": "Adapter to make User compatible with Doctrine ORM",
     "keywords": ["user", "adapter", "doctrine", "orm", "ddd"],
     "license": "MIT",
@@ -24,7 +24,7 @@
     ],
     "require": {
         "php": "^5.5 || ^7.0",
-        "bengor/user": "dev-refactor/decouple-from-third-party-libraries",
+        "bengor-user/user": "0.6.x-dev",
         "doctrine/orm": "^2.5"
     },
     "require-dev": {
