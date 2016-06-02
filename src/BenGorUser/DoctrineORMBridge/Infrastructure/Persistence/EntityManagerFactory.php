@@ -12,7 +12,6 @@
 
 namespace BenGorUser\DoctrineORMBridge\Infrastructure\Persistence;
 
-use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types\UserGuestIdType;
 use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types\UserIdType;
 use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\Types\UserRolesType;
 use Doctrine\DBAL\Types\Type;
@@ -37,7 +36,6 @@ class EntityManagerFactory
     public function build($aConnection, $isDevMode = true)
     {
         Type::addType('user_id', UserIdType::class);
-        Type::addType('user_guest_id', UserGuestIdType::class);
         Type::addType('user_roles', UserRolesType::class);
 
         return EntityManager::create(

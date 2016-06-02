@@ -12,3 +12,4 @@ BenGorUser\User\Domain\Model\UserToken:
         token:
             length: 36
             type: string
+            nullable: true

@@ -54,6 +54,14 @@ final class DoctrineORMUserRepository extends EntityRepository implements UserRe
     /**
      * {@inheritdoc}
      */
+    public function userOfInvitationToken(UserToken $anInvitationToken)
+    {
+        return $this->findOneBy(['invitationToken.token' => $anInvitationToken->token()]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function userOfRememberPasswordToken(UserToken $aRememberPasswordToken)
     {
         return $this->findOneBy(['rememberPasswordToken.token' => $aRememberPasswordToken->token()]);
@@ -86,13 +94,5 @@ final class DoctrineORMUserRepository extends EntityRepository implements UserRe
             ->select($queryBuilder->expr()->count('u.id.id'))
             ->getQuery()
             ->getSingleScalarResult();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function nextIdentity()
-    {
-        return new UserId();
     }
 }
