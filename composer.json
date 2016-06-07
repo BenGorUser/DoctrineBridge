@@ -16,12 +16,6 @@
             "homepage": "http://gorkalaucirica.net"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/BenGorUser/User"
-        }
-    ],
     "require": {
         "php": "^5.5 || ^7.0",
         "bengor-user/user": "0.6.x-dev",
