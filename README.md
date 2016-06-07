@@ -4,8 +4,8 @@
 [![Build Status](https://travis-ci.org/BenGorUser/DoctrineORMBridge.svg?branch=master)](https://travis-ci.org/BenGorUser/DoctrineORMBridge)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/BenGorUser/DoctrineORMBridge/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/BenGorUser/DoctrineORMBridge/?branch=master)
 [![Total Downloads](https://poser.pugx.org/bengor-user/doctrine-orm-bridge/downloads)](https://packagist.org/packages/bengor-user/doctrine-orm-bridge/)
-[![Latest Stable Version](https://poser.pugx.org/bengor-user/doctrine-orm-bridge//v/stable.svg)](https://packagist.org/packages/bengor-user/doctrine-orm-bridge/)
-[![Latest Unstable Version](https://poser.pugx.org/bengor-user/doctrine-orm-bridge//v/unstable.svg)](https://packagist.org/packages/bengor-user/doctrine-orm-bridge/)
+[![Latest Stable Version](https://poser.pugx.org/bengor-user/doctrine-orm-bridge/v/stable.svg)](https://packagist.org/packages/bengor-user/doctrine-orm-bridge/)
+[![Latest Unstable Version](https://poser.pugx.org/bengor-user/doctrine-orm-bridge/v/unstable.svg)](https://packagist.org/packages/bengor-user/doctrine-orm-bridge/)
 
 ##Requirements
 PHP >= 5.5
@@ -52,7 +52,7 @@ This library is created by:
 **@gorkalaucirica** - [gorka.lauzirika@gmail.com](mailto:gorka.lauzirika@gmail.com)
 
 ##Licensing Options
-[![License](https://poser.pugx.org/bengor-user/doctrine-orm-bridge//license.svg)](https://github.com/BenGorUser/DoctrineORMBridge/blob/master/LICENSE)
+[![License](https://poser.pugx.org/bengor-user/doctrine-orm-bridge/license.svg)](https://github.com/BenGorUser/DoctrineORMBridge/blob/master/LICENSE)
 
 [1]: http://www.phpspec.net/
 [2]: http://symfony.com/doc/current/contributing/code/index.html
