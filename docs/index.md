@@ -1,1 +1,0 @@
-# DoctrineORMBridge documentation
