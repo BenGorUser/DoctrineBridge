@@ -28,19 +28,20 @@ class EntityManagerFactory
     /**
      * Creates an entity manager instance enabling mappings and custom types.
      *
-     * @param mixed $aConnection Connection parameters as db driver
-     * @param bool  $isDevMode   Enables the dev mode, by default is enabled
+     * @param mixed $aConnection   Connection parameters as db driver
+     * @param array $mappingsPaths The mapping files diretory paths
+     * @param bool  $isDevMode     Enables the dev mode, by default is enabled
      *
      * @return EntityManager
      */
-    public function build($aConnection, $isDevMode = true)
+    public function build($aConnection, array $mappingsPaths = [__DIR__ . '/Mapping'], $isDevMode = true)
     {
         Type::addType('user_id', UserIdType::class);
         Type::addType('user_roles', UserRolesType::class);
 
         return EntityManager::create(
             $aConnection,
-            Setup::createYAMLMetadataConfiguration([__DIR__ . '/Mapping'], $isDevMode)
+            Setup::createYAMLMetadataConfiguration($mappingsPaths, $isDevMode)
         );
     }
 }

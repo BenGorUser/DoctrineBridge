@@ -13,7 +13,6 @@
 namespace spec\BenGorUser\DoctrineORMBridge\Infrastructure\Persistence;
 
 use BenGorUser\DoctrineORMBridge\Infrastructure\Persistence\EntityManagerFactory;
-use BenGorUser\User\Domain\Model\User;
 use Doctrine\ORM\EntityManager;
 use PhpSpec\ObjectBehavior;
 
@@ -36,6 +35,6 @@ class EntityManagerFactorySpec extends ObjectBehavior
             'user'     => 'root',
             'password' => '',
             'dbname'   => 'bengor_user_db',
-        ], true)->shouldReturnAnInstanceOf(EntityManager::class);
+        ], [__DIR__ . '/Mapping'], true)->shouldReturnAnInstanceOf(EntityManager::class);
     }
 }
