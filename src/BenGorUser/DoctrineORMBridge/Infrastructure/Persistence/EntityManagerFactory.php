@@ -34,8 +34,12 @@ class EntityManagerFactory
      *
      * @return EntityManager
      */
-    public function build($aConnection, array $mappingsPaths = [__DIR__ . '/Mapping'], $isDevMode = true)
+    public function build($aConnection, array $mappingsPaths = [], $isDevMode = true)
     {
+        if (empty($mappingsPaths)) {
+            $mappingsPaths = [__DIR__ . '/Mapping'];
+        }
+
         Type::addType('user_id', UserIdType::class);
         Type::addType('user_roles', UserRolesType::class);
 
