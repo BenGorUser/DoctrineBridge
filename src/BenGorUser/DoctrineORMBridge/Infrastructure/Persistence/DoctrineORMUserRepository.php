@@ -25,7 +25,7 @@ use Doctrine\ORM\EntityRepository;
  * @author Beñat Espiña <benatespina@gmail.com>
  * @author Gorka Laucirica <gorka.lauzirika@gmail.com>
  */
-final class DoctrineORMUserRepository extends EntityRepository implements UserRepository
+class DoctrineORMUserRepository extends EntityRepository implements UserRepository
 {
     /**
      * {@inheritdoc}
