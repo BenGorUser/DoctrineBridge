@@ -40,6 +40,10 @@ final class UserRolesType extends JsonArrayType
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
+        if (null === $value) {
+            return;
+        }
+
         $userRoles = array_map(function ($role) {
             return new UserRole($role);
         }, json_decode($value));
