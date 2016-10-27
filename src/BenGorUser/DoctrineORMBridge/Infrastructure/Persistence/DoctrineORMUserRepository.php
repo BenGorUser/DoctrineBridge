@@ -91,7 +91,7 @@ class DoctrineORMUserRepository extends EntityRepository implements UserReposito
         $queryBuilder = $this->createQueryBuilder('u');
 
         return $queryBuilder
-            ->select($queryBuilder->expr()->count('u.id.id'))
+            ->select($queryBuilder->expr()->count('u.id'))
             ->getQuery()
             ->getSingleScalarResult();
     }

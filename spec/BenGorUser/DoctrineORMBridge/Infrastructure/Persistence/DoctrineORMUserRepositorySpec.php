@@ -172,8 +172,8 @@ class DoctrineORMUserRepositorySpec extends ObjectBehavior
         $queryBuilder->select('u')->shouldBeCalled()->willReturn($queryBuilder);
         $queryBuilder->from(null, 'u', null)->shouldBeCalled()->willReturn($queryBuilder);
 
-        $func->__toString()->willReturn('COUNT(user.id.id)');
-        $expr->count('u.id.id')->shouldBeCalled()->willReturn($func);
+        $func->__toString()->willReturn('COUNT(user.id)');
+        $expr->count('u.id')->shouldBeCalled()->willReturn($func);
         $queryBuilder->select($func)->shouldBeCalled()->willReturn($queryBuilder);
         $queryBuilder->getQuery()->shouldBeCalled()->willReturn($query);
         $query->getSingleScalarResult()->shouldBeCalled()->willReturn(2);
