@@ -62,6 +62,24 @@ class DoctrineORMUserRepositorySpec extends ObjectBehavior
         $this->userOfId(new UserId('user-id'))->shouldReturn($user);
     }
 
+    function it_get_all(
+        User $user,
+        EntityManager $manager,
+        UnitOfWork $unitOfWork,
+        EntityPersister $entityPersister
+    ) {
+        $manager->getUnitOfWork()->shouldBeCalled()->willReturn($unitOfWork);
+        $unitOfWork->getEntityPersister(null)->shouldBeCalled()->willReturn($entityPersister);
+        $entityPersister->loadAll(
+            [],
+            null,
+            null,
+            null
+        )->shouldBeCalled()->willReturn([$user]);
+
+        $this->all()->shouldReturn([$user]);
+    }
+
     function it_get_user_of_email(
         User $user,
         EntityManager $manager,

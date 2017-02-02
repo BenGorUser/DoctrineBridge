@@ -38,6 +38,14 @@ class DoctrineORMUserRepository extends EntityRepository implements UserReposito
     /**
      * {@inheritdoc}
      */
+    public function all()
+    {
+        return $this->findAll();
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function userOfEmail(UserEmail $anEmail)
     {
         return $this->findOneBy(['email.email' => $anEmail->email()]);
