@@ -40,6 +40,10 @@ class UserIdType extends GuidType
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
+        if (null === $value) {
+            return;
+        }
+
         return new UserId($value);
     }
 
